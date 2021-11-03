@@ -18,10 +18,13 @@
             var res = document.querySelector('div#res')
             var país = (txtr.value)
        
-            if(txtr.value == Number(txtr.value)){
-                window.confirm('Digite sua Nacionalidade!')
+            if(txtr.value == false){
+                window.confirm('Nacionalidade não pode ser vazia!')
             }
+            else if(txtr.value == Number(txtr.value)){
+                window.confirm('Nacionalidade não pode ser número(s)!')
 
+            }
             else{
                 res.innerHTML = `<p>Vivendo em <strong>${país}</strong></p>`
 
