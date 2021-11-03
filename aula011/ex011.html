@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Qual a sua Nacionalidade <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var txtr = document.getElementById('txt1')
+            var res = document.querySelector('div#res')
+            var país = (txtr.value)
+            //res.innerHTML = `<p>Vivendo em <strong>${país}</strong></p>`
+            if(txtr.value == '' || Number){
+                window.confirm('Digite sua Nacionalidade!')
+            }
+            else{
+                res.innerHTML = `<p>Vivendo em <strong>${país}</strong></p>`
+
+                if(país == 'Brasil'){
+                    res.innerHTML += '<p>Você é <strong>Brasileiro!</strong></p>'
+                }
+                else{
+                    res.innerHTML += '<p>Você é <strong>Estrangeiro!</strong></p>'
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>
