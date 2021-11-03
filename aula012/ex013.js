@@ -1,4 +1,4 @@
-var hora_atual = new Date
+var hora_atual = new Date()
 var hora = hora_atual.getHours()
 console.log(`Agora são exatamente ${hora} horas.`)
 if(hora < 6){
