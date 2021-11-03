@@ -17,14 +17,15 @@
             var txtr = document.getElementById('txt1')
             var res = document.querySelector('div#res')
             var país = (txtr.value)
-            //res.innerHTML = `<p>Vivendo em <strong>${país}</strong></p>`
-            if(txtr.value == '' || Number){
+       
+            if(txtr.value == Number(txtr.value)){
                 window.confirm('Digite sua Nacionalidade!')
             }
+
             else{
                 res.innerHTML = `<p>Vivendo em <strong>${país}</strong></p>`
 
-                if(país == 'Brasil'){
+                if(país == 'Brasil' || país == 'brasil'){
                     res.innerHTML += '<p>Você é <strong>Brasileiro!</strong></p>'
                 }
                 else{
