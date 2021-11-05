@@ -18,7 +18,7 @@
             var res = document.querySelector('div#res')
             var país = (txtr.value)
        
-            if(txtr.value == false){
+            if(txtr.value.length == 0){
                 window.confirm('Nacionalidade não pode ser vazia!')
             }
             else if(txtr.value == Number(txtr.value)){
