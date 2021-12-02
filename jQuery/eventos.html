@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <Style>
+        div{
+            background: green;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            position:relative;
+        }
+    </Style>
+</head>
+<body>
+    <div class="box">
+        Interaja...
+    </div>
+    <hr>
+    <button id="next">Next</button>
+    <button id="prev">Prev</button>
+
+    <script>
+
+        /*
+        Usando variaveis 
+        let box = $('.box');
+        let next = $('#next');
+        let prev = $('#prev');
+
+        next.on("click", function(){
+            box.animate({left: '900px'}, 2000)
+        })
+        
+        prev.on("click", function(){
+        //     box.animate({left: '0px'}, 2000)
+        })
+        */
+
+        $(document).ready(function(){
+            $('#next').click(function(){
+                $('.box').animate({left: '900px'}, 2000)
+            })
+            
+            $('#prev').click(function(){
+                $('.box').animate({left: '0px'}, 2000)
+            })
+
+            $('.box').click(function(){
+                $('.box')
+                .text('Clicou!')
+                .css('background', 'red')
+            })
+
+            $('.box').mouseenter(function(){
+                $('.box')
+                .text('Entrou!')
+            })
+
+            $('.box').mouseout(function(){
+                $('.box')
+                .text('Saiu!')
+                .css('background', 'green')
+            })
+        })
+    </script>
+</body>
+</html>
