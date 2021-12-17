@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 2.0</title>
+</head>
+
+
+<style>
+  * {
+padding:0;
+margin:0;
+vertical-align:baseline;
+list-style:none;
+
+}
+ h1{
+     text-align: center;
+     padding: 2%;
+     font-family: 'Times New Roman', Times, serif;
+ }
+  body{
+    background-color: rgba(194, 176, 176, 0.302);
+    height: 80vh;
+  }
+  main{
+      display: flex;
+      width: 95%;
+      height: 100%;
+      align-items: center;
+    
+  }
+
+  .tarefa{
+      width: 50%;
+      
+  }
+.text_area{
+    font-size: 1.1rem;
+    border-radius: 5%;
+    padding: 4%;
+    color: rgb(1, 73, 43);
+  }
+  .sect_tarefa{
+    width: 80%;
+    display: flex;
+    margin-left: 50px;
+    flex-direction: column;
+  }
+.lista{
+    width: 100%;
+    height: 100%;
+}
+button{
+  background-color: rgb(126, 126, 128);
+  padding: 5%;
+  border-radius: 2%;
+  margin-top: 5%;
+  color: white;
+  font-weight: 800;
+}
+button:hover{
+  cursor: pointer;
+}
+.lista ul{
+  background-color: rgb(94, 94, 94);
+  border: 2px solid black;
+  border-radius: 2%;
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  margin: 0;
+}
+.lista ul li{
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  text-decoration: none;
+  list-style: none;
+  padding: 1%;
+
+  border-radius: 1%;
+
+}
+</style>
+
+
+<body>
+<h1>Lista de tarefas</h1>
+    <main>
+        <section class="tarefa">
+        <div class="sect_tarefa">      
+            <textarea placeholder="Escreva aqui sua tarefa..." class="text_area" style="height:auto!important; resize: none;"   rows="10"></textarea>
+            <button onclick="add_list()"> ADICIONAR TAREFA</button>
+        </div>
+        </section>
+        <section class="lista">
+            <ul class="ul_list">
+               
+            </ul>
+        </section>
+    </main>
+
+
+ 
+  <script>
+  
+
+
+
+function add_list(){
+   
+  let list = document.querySelector('.text_area').value;
+  let ul_list = document.querySelector('.ul_list')
+  let x = document.createElement('li');
+
+if(!list == ""){
+  x.innerHTML = list;
+  ul_list.appendChild(x);
+  clear();
+}
+}
+
+function clear(){
+  document.querySelector('.text_area').value="";
+}
+
+  </script>
+</body>
+
+</html>
